@@ -20,7 +20,7 @@ def retrieve_html():
                 url='http://en.tutiempo.net/climate/{}-{}/ws-421820.html'.format(month
                                                                           ,year)
             texts=requests.get(url)
-            text_utf=texts.text.encode('utf=8')
+            text_utf=texts.text.encode('utf-8')
             
             if not os.path.exists("Data/Html_Data/{}".format(year)):
                 os.makedirs("Data/Html_Data/{}".format(year))
